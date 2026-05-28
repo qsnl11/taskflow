@@ -1,0 +1,51 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+*.log
+
+# IDE
+.idea/
+*.iml
+*.iws
+.classpath
+.project
+.settings/
+.vscode/
+
+# Maven
+log/
+dependency-reduced-pom.xml
+
+# Database (ВАЖНО - БД не попадёт в репозиторий!)
+*.db
+*.sqlite
+*.h2.db
+*.mv.db
+*.trace.db
+postgres/
+pgdata/
+
+# Application properties (с паролями)
+application-local.yml
+application-dev.yml
+application-prod.yml
+*.secret.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temp
+tmp/
+temp/
+*.tmp
+
+# Maven wrapper (опционально, но лучше оставить для других)
+.mvn/wrapper/maven-wrapper.jar
