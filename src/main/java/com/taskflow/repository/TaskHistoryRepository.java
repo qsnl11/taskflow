@@ -1,7 +1,7 @@
 package com.taskflow.repository;
 
-import com.taskflow.entity.TaskHistory;
 import com.taskflow.entity.Task;
+import com.taskflow.entity.TaskHistory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;

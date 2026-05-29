@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -43,9 +44,11 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "role_id")
+    @JsonIgnore
     private Role role;
 
     @OneToMany(mappedBy = "assignee", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Task> assignedTasks = new ArrayList<>();
 
     @OneToMany(mappedBy = "reporter", fetch = FetchType.LAZY)

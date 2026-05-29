@@ -36,6 +36,9 @@ CREATE DATABASE taskflow;
 
 ### Локальный запуск
 ```bash
+git clone https://github.com/qsnl11/taskflow.git
+```
+```bash
 mvn spring-boot:run
 ```
 
@@ -47,7 +50,7 @@ mvn spring-boot:run
 - Password: admin123
 
 ### Рекомендуемый порядок тестирования:
-1. Авторизуйтесь через кнопку Authorize
+1. Авторизуйтесь через эндпоинт POST /api/auth/login как тестовый администратор, далее введите токен через кнопку Authorize
 2. Создайте проект - POST /api/projects
 3. Создайте задачу - POST /api/tasks
 4. Получите список задач - GET /api/tasks
